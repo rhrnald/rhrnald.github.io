@@ -7,214 +7,132 @@
     <meta name="description" content="Systems researcher focused on high-performance GPU computing and numerical algorithms." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:wght@500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="page">
-      <header class="nav">
-        <div class="brand">Chaewon Kim</div>
-        <nav>
+    <header class="site-header">
+      <div class="container">
+        <div class="title-block">
+          <h1>Chaewon Kim</h1>
+          <p class="subtitle">Systems Researcher, Dept. of Computer Science &amp; Engineering, Seoul National University</p>
+          <p class="contact-line">Seoul, Republic of Korea · <a href="mailto:chaewon@aces.snu.ac.kr">chaewon@aces.snu.ac.kr</a> · +82 10 5095 2407 · <a href="CV_ChaewonKim.pdf">CV (PDF)</a></p>
+        </div>
+        <nav class="nav">
           <a href="#research">Research</a>
-          <a href="#experience">Experience</a>
           <a href="#publications">Publications</a>
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
           <a href="#awards">Awards</a>
           <a href="#contact">Contact</a>
         </nav>
-      </header>
+      </div>
+    </header>
 
-      <main>
-        <section class="hero">
-          <div class="hero-text">
-            <p class="eyebrow">Systems Researcher</p>
-            <h1>High-performance GPU computing and numerical algorithms.</h1>
-            <p class="lede">
-              I am a systems researcher focused on high-performance GPU computing
-              and numerical algorithms. I am motivated by mathematical reasoning
-              and algorithmic problem-solving, which guide my work on FFTs, sparse
-              solvers, and accelerator-optimized computation. My research aims to
-              reduce data movement, improve locality, and deliver predictable high
-              utilization on modern accelerators.
-            </p>
-            <div class="cta-row">
-              <a class="btn primary" href="#publications">Publications</a>
-              <a class="btn ghost" href="CV_ChaewonKim.pdf">Download CV</a>
-            </div>
-          </div>
-          <div class="hero-card">
-            <div class="stat">
-              <span class="stat-label">Affiliation</span>
-              <span class="stat-value">SNU CSE</span>
-            </div>
-            <div class="stat">
-              <span class="stat-label">Lab</span>
-              <span class="stat-value">Thunder Research Lab</span>
-            </div>
-            <div class="stat">
-              <span class="stat-label">Based in</span>
-              <span class="stat-value">Seoul</span>
-            </div>
-            <div class="stat">
-              <span class="stat-label">Email</span>
-              <span class="stat-value">chaewon@aces.snu.ac.kr</span>
-            </div>
-          </div>
-        </section>
+    <main class="container">
+      <section id="research" class="section">
+        <h2>Research Summary</h2>
+        <p>
+          I am a systems researcher focused on high-performance GPU computing and numerical algorithms.
+          I am motivated by mathematical reasoning and algorithmic problem-solving, which guide my work on FFTs,
+          sparse solvers, and accelerator-optimized computation. My research aims to develop hardware-aware methods
+          that reduce data movement, improve locality, and deliver predictable high utilization on modern accelerators.
+        </p>
+        <ul class="compact-list">
+          <li>High-performance GPU and accelerator systems; parallel and heterogeneous computing</li>
+          <li>Algorithm-hardware co-design; compiler IR, kernel generation, and runtime optimization</li>
+          <li>Sparse computation and sparsity-driven algorithms</li>
+          <li>Numerical algorithms (FFT, linear algebra) and data-movement-efficient computation</li>
+          <li>Distributed and multi-GPU systems; communication-efficient parallel algorithms</li>
+        </ul>
+      </section>
 
-        <section id="research" class="section">
-          <div class="section-title">
-            <h2>Research summary</h2>
-            <p>Hardware-aware methods for efficient numerical and sparse workloads.</p>
-          </div>
-          <div class="grid">
-            <article class="card reveal reveal-1">
-              <h3>Tensor Core FFT kernels</h3>
-              <p>Permutation-fused data layout and CUDA kernels delivering 3x speedup vs cuFFTDx with over 70% Tensor Core utilization.</p>
-              <span class="tag">FFT</span>
-            </article>
-            <article class="card reveal reveal-2">
-              <h3>Sparse solver optimization</h3>
-              <p>GPU-aware nested dissection and sparsity-region partitioning to improve locality and reduce communication overhead.</p>
-              <span class="tag">Sparse</span>
-            </article>
-            <article class="card reveal reveal-3">
-              <h3>LLM systems and profiling</h3>
-              <p>Large-scale data pipelines, GPU-accelerated deduplication, and training efficiency studies with CUPTI/Nsight.</p>
-              <span class="tag">Systems</span>
-            </article>
-          </div>
-        </section>
+      <section id="publications" class="section">
+        <h2>Publications &amp; Preprints</h2>
+        <ol class="numbered-list">
+          <li>Accelerating Fast Fourier Transform with Tensor Cores. Submitted (PLDI, under review), 2026.</li>
+          <li>Accelerating 2D Convolution using cuFFTDx. Korea Computer Congress (KCC), 2025.</li>
+          <li>SnuSOLVER: Optimizing Sparse Direct Solvers for Heterogeneous Systems. Proceedings of ICS 2025.</li>
+          <li>FED: Fast and Efficient Dataset Deduplication Framework with GPU Acceleration. arXiv:2501.01046, 2025.</li>
+          <li>New Adaptive Matching Order and Performance Comparison for Subgraph Matching Problem. KCC Best Paper Award, 2021.</li>
+          <li>Efficient Homomorphic Max Algorithm for Multivariables. Preprint, 2020.</li>
+        </ol>
+      </section>
 
-        <section id="experience" class="section split">
-          <div>
-            <h2>Research experience</h2>
-            <p>
-              Graduate researcher at Thunder Research Lab, Seoul National University,
-              working on GPU-accelerated numerical and sparse systems. Previous work
-              spans large-scale LLM systems, quantum circuit optimization, and
-              cryptography acceleration.
-            </p>
+      <section id="experience" class="section">
+        <h2>Research Experience</h2>
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Graduate Researcher, Thunder Research Lab (Advisor: Prof. Jaejin Lee)</span>
+            <span class="entry-time">Sep 2022 - Present</span>
           </div>
-          <div class="stack">
-            <div class="pill">CUDA and Tensor Cores</div>
-            <div class="pill">Performance modeling</div>
-            <div class="pill">Sparse computation</div>
-            <div class="pill">MPI and NCCL</div>
+          <ul>
+            <li>Tensor-Core FFT kernels (Mar 2025 - Present): 3x speedup vs cuFFTDx and &gt;70% Tensor Core utilization on A100/H100.</li>
+            <li>Sparse linear solver optimization (Sep 2023 - Jun 2025): GPU-aware nested dissection and CPU-GPU pipeline for sparse LU.</li>
+            <li>Quantum circuit optimization (Nov 2024 - Feb 2025): memory-aware partitioning for improved locality.</li>
+            <li>Large-scale LLM systems research (May 2022 - Mar 2023): data pipelines, GPU LSH dedup, training efficiency.</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Undergraduate Researcher, Thunder Research Lab</span>
+            <span class="entry-time">Mar 2021 - Aug 2022</span>
           </div>
-        </section>
+          <ul>
+            <li>Developed GPU kernels and simulations in OpenCL/CUDA/PyTorch; quantization strategies for ML workloads.</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">UROP Researcher, Seoul National University</span>
+            <span class="entry-time">Sep 2020 - Dec 2020</span>
+          </div>
+          <ul>
+            <li>Improved DAF graph matching by identifying bottlenecks on large real-world graphs.</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Research Intern, CryptoLab (Advisor: Prof. Jung Hee Cheon)</span>
+            <span class="entry-time">Feb 2020 - Aug 2020</span>
+          </div>
+          <ul>
+            <li>Optimized CKKS (HEAAN) polynomial routines and proposed a division-free homomorphic max algorithm.</li>
+          </ul>
+        </div>
+      </section>
 
-        <section class="section timeline">
-          <div class="section-title">
-            <h2>Positions</h2>
-            <p>Research roles across systems, accelerators, and algorithms.</p>
-          </div>
-          <div class="timeline-grid">
-            <div class="timeline-item">
-              <span class="time">Sep 2022 - Present</span>
-              <h3>Graduate Researcher, Thunder Research Lab</h3>
-              <p>Seoul National University. Tensor Core FFTs, sparse LU optimization, and accelerator-aware kernels.</p>
-            </div>
-            <div class="timeline-item">
-              <span class="time">May 2022 - Mar 2023</span>
-              <h3>Large-scale LLM systems research</h3>
-              <p>Data infrastructure, GPU optimization, and LSH-based deduplication for foundation-model training.</p>
-            </div>
-            <div class="timeline-item">
-              <span class="time">Mar 2021 - Aug 2022</span>
-              <h3>Undergraduate Researcher, Thunder Research Lab</h3>
-              <p>GPU kernels and simulations in OpenCL/CUDA/PyTorch; quantization strategies for ML workloads.</p>
-            </div>
-            <div class="timeline-item">
-              <span class="time">Sep 2020 - Dec 2020</span>
-              <h3>UROP Researcher, SNU</h3>
-              <p>Optimized DAF graph matching by analyzing bottlenecks on large real-world graphs.</p>
-            </div>
-            <div class="timeline-item">
-              <span class="time">Feb 2020 - Aug 2020</span>
-              <h3>Research Intern, CryptoLab</h3>
-              <p>Optimized CKKS (HEAAN) operations and proposed a division-free homomorphic max algorithm.</p>
-            </div>
-          </div>
-        </section>
+      <section id="education" class="section">
+        <h2>Education</h2>
+        <ul class="compact-list">
+          <li>M.S. in Computer Science &amp; Engineering, Seoul National University (2022 Sep - 2025 Aug)</li>
+          <li>B.S. in Computer Science &amp; Engineering, Seoul National University (2016 Mar - 2022 Aug), Minor in Mathematics</li>
+          <li>Seoul Science High School (2013 Mar - 2016 Feb)</li>
+        </ul>
+      </section>
 
-        <section id="publications" class="section">
-          <div class="section-title">
-            <h2>Publications and preprints</h2>
-            <p>Selected papers and submissions.</p>
-          </div>
-          <div class="list">
-            <div class="list-item">
-              <span class="list-title">Accelerating Fast Fourier Transform with Tensor Cores</span>
-              <span class="list-meta">Submitted (PLDI, under review), 2026</span>
-            </div>
-            <div class="list-item">
-              <span class="list-title">Accelerating 2D Convolution using cuFFTDx</span>
-              <span class="list-meta">Korea Computer Congress (KCC), 2025</span>
-            </div>
-            <div class="list-item">
-              <span class="list-title">SnuSOLVER: Optimizing Sparse Direct Solvers for Heterogeneous Systems</span>
-              <span class="list-meta">Proceedings of ICS 2025</span>
-            </div>
-            <div class="list-item">
-              <span class="list-title">FED: Fast and Efficient Dataset Deduplication Framework with GPU Acceleration</span>
-              <span class="list-meta">arXiv:2501.01046, 2025</span>
-            </div>
-            <div class="list-item">
-              <span class="list-title">New Adaptive Matching Order and Performance Comparison for Subgraph Matching Problem</span>
-              <span class="list-meta">KCC Best Paper Award, 2021</span>
-            </div>
-            <div class="list-item">
-              <span class="list-title">Efficient Homomorphic Max Algorithm for Multivariables</span>
-              <span class="list-meta">Preprint, 2020</span>
-            </div>
-          </div>
-        </section>
+      <section id="awards" class="section">
+        <h2>Awards &amp; Honors</h2>
+        <ul class="compact-list">
+          <li>Presidential Science Scholarship, Korea Student Aid Foundation (2016-2022)</li>
+          <li>ACM-ICPC Asia Regional (Seoul) 4th Place (2020, 2021)</li>
+          <li>Korean Mathematical Competition for University Students, Silver Prize (2019)</li>
+          <li>UCPC 3rd Place (2019); Samsung Collegiate Programming Cup 5th Place (2018)</li>
+          <li>International Mathematical Olympiad Bronze Medal (2015); Korea Mathematical Olympiad Gold (2014)</li>
+        </ul>
+      </section>
 
-        <section id="awards" class="section split">
-          <div>
-            <h2>Awards and honors</h2>
-            <p>Scholarships, competitions, and academic recognition.</p>
-          </div>
-          <div class="stack">
-            <div class="pill">Presidential Science Scholarship (2016-2022)</div>
-            <div class="pill">ACM-ICPC Asia Regional 4th Place (2020, 2021)</div>
-            <div class="pill">Korean Mathematical Competition Silver Prize (2019)</div>
-            <div class="pill">International Mathematical Olympiad Bronze (2015)</div>
-          </div>
-        </section>
+      <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:chaewon@aces.snu.ac.kr">chaewon@aces.snu.ac.kr</a></p>
+        <p>GitHub: <a href="https://github.com/rhrnald" target="_blank" rel="noreferrer">github.com/rhrnald</a></p>
+      </section>
+    </main>
 
-        <section class="section split">
-          <div>
-            <h2>Teaching and service</h2>
-            <p>Teaching assistant roles and military service.</p>
-          </div>
-          <div class="stack">
-            <div class="pill">TA, Accelerator Programming School (Winter 2022 - Summer 2025)</div>
-            <div class="pill">TA, High Performance Parallel Computing (Fall 2022 - Spring 2025)</div>
-            <div class="pill">TA, Algorithms (Spring 2025)</div>
-            <div class="pill">ROK Air Force, Special Intelligence (2018 - 2020)</div>
-          </div>
-        </section>
-
-        <section id="contact" class="section contact">
-          <h2>Contact</h2>
-          <p>Open to collaboration on GPU systems and numerical computing.</p>
-          <div class="contact-row">
-            <a class="btn primary" href="mailto:chaewon@aces.snu.ac.kr">chaewon@aces.snu.ac.kr</a>
-            <a class="btn ghost" href="tel:+821050952407">+82 10 5095 2407</a>
-          </div>
-          <div class="contact-row">
-            <a class="btn ghost" href="https://github.com/rhrnald" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="btn ghost" href="CV_ChaewonKim.pdf">CV PDF</a>
-          </div>
-        </section>
-      </main>
-
-      <footer class="footer">
-        <span>2025 Chaewon Kim</span>
-        <span>Research in GPU systems and numerical computing.</span>
-      </footer>
-    </div>
-    <script src="js/main.js"></script>
+    <footer class="footer">
+      <div class="container">
+        <span>Updated 2025</span>
+      </div>
+    </footer>
   </body>
 </html>
