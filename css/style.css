@@ -192,6 +192,12 @@ h2 {
   line-height: 1.45;
 }
 
+.author-me {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
 .plain-list {
   padding-left: 20px;
   margin-top: 8px;
