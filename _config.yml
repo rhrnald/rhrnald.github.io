@@ -8,22 +8,10 @@ description: >
   computing and hardware-aware algorithms.
 
 version:          1.0
-gitbook_version:  3.2.3
 
 url:              'https://rhrnald.github.io'
 baseurl:          ''
 rss:              RSS
-
-# bootstrap: use the remote theme for the site itself
-remote_theme: sighingnow/jekyll-gitbook
-
-toc:
-  enabled: true
-  h_min: 1
-  h_max: 3
-
-# customize the link favicon in header, will be {{site.baseurl}}/{{site.favicon_path}}
-favicon_path:     /assets/gitbook/images/favicon.ico
 
 # markdown render engine.
 markdown:         kramdown
@@ -43,9 +31,6 @@ markdown_ext:             markdown,mkdown,mkdn,mkd,md
 
 # Permalinks
 permalink:                /:categories/:year-:month-:day-:title:output_ext
-
-# Disqus comments
-# disqushandler:            sighingnow
 
 exclude:
   - _drafts
