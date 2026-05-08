@@ -59,6 +59,35 @@ ol {
 
 .nav a {
   color: var(--muted);
+  position: relative;
+  transition: color 180ms ease;
+}
+
+.nav a::after {
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  left: 0;
+  height: 1px;
+  background: var(--accent);
+  content: "";
+  opacity: 0;
+  transform: scaleX(0.65);
+  transform-origin: center;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.nav a:hover,
+.nav a:focus,
+.nav a.is-active {
+  color: var(--accent);
+}
+
+.nav a.is-active::after {
+  opacity: 1;
+  transform: scaleX(1);
 }
 
 h1,
@@ -95,6 +124,7 @@ h2 {
 .section {
   padding: 32px 0;
   border-bottom: 1px solid var(--line);
+  scroll-margin-top: 20px;
 }
 
 .section:last-of-type {
@@ -159,6 +189,32 @@ h2 {
   padding: 18px 0 36px;
   color: var(--muted);
   font-size: 15px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  main {
+    transition:
+      opacity 180ms ease,
+      transform 180ms ease;
+  }
+
+  body.is-navigating main {
+    opacity: 0.72;
+    transform: translateY(3px);
+  }
+
+  body.js-ready .section {
+    opacity: 0;
+    transform: translateY(12px);
+    transition:
+      opacity 520ms ease,
+      transform 520ms ease;
+  }
+
+  body.js-ready .section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 640px) {
