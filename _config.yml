@@ -4,7 +4,8 @@ longtitle:        Chaewon Kim
 author:           Chaewon Kim
 email:            chaewon@aces.snu.ac.kr
 description: >
-  Personal academic homepage for Chaewon Kim.
+  Academic homepage for Chaewon Kim, focused on GPU-accelerated numerical
+  computing and hardware-aware algorithms.
 
 version:          1.0
 gitbook_version:  3.2.3

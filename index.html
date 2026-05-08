@@ -6,7 +6,7 @@
     <title>Chaewon Kim</title>
     <meta
       name="description"
-      content="Chaewon Kim, systems researcher focused on high-performance GPU computing and numerical algorithms."
+      content="Chaewon Kim, systems researcher focused on GPU-accelerated numerical computing and hardware-aware algorithms."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,10 +21,10 @@
       <div class="container">
         <nav class="nav" aria-label="Main navigation">
           <a href="#about">About</a>
-          <a href="#education">Education</a>
           <a href="#publications">Publications</a>
-          <a href="#experience">Research Experience</a>
-          <a href="#awards">Awards</a>
+          <a href="#research">Research</a>
+          <a href="#education">Education</a>
+          <a href="#honors">Selected Honors</a>
           <a href="#teaching">Teaching</a>
         </nav>
 
@@ -47,20 +47,109 @@
       <section id="about" class="section">
         <h2>About</h2>
         <p>
-          I am a systems researcher focused on high-performance GPU computing and
-          numerical algorithms. I study performance problems in complex computing
-          systems by structuring them mathematically, analyzing bottlenecks across
-          the hardware-software boundary, and validating ideas through real
-          implementations and experiments. My work is guided by mathematical
-          reasoning and algorithmic problem-solving, with an emphasis on FFTs,
-          sparse solvers, and accelerator-optimized computation.
+          I study how numerical algorithms can be redesigned around modern GPU
+          hardware, especially Tensor Cores, memory hierarchy, and data movement
+          constraints. My work focuses on high-performance GPU computing,
+          numerical algorithms, and hardware-aware optimization.
         </p>
         <p>
-          Recently, I have worked on hardware-aware optimization for modern GPUs,
-          including Tensor Core FFT kernels, sparse direct solvers for
-          heterogeneous systems, and data-movement-efficient methods that improve
-          locality, utilization, and predictable performance.
+          My recent work focuses on GPU-accelerated numerical computing. I have
+          worked on Tensor Core FFT kernels, GPU-aware sparse direct solvers, and
+          multi-GPU solver components, with a common focus on reducing data
+          movement and improving locality.
         </p>
+      </section>
+
+      <section id="publications" class="section">
+        <h2>Publications</h2>
+
+        <div class="publication-group">
+          <h3 class="publication-heading">Peer-reviewed</h3>
+          <ol class="publication-list">
+            <li class="publication">
+              <p class="pub-title"><strong>SnuSOLVER: Optimizing Sparse Direct Solvers for Heterogeneous Systems.</strong></p>
+              <p><span class="author-me">C. Kim</span>, J. Lee, J. Kim, D. Kim, K. Ahn, H. U. Cho, S. Baek, and J. Lee.</p>
+              <p>Proceedings of ICS 2025.</p>
+            </li>
+          </ol>
+        </div>
+
+        <div class="publication-group">
+          <h3 class="publication-heading">Manuscripts</h3>
+          <ol class="publication-list">
+            <li class="publication">
+              <p class="pub-title"><strong>Accelerating Fast Fourier Transform with Tensor Cores.</strong></p>
+              <p><span class="author-me">C. Kim</span>, S. Bae, S. Lee, J. Lee, J. Kim, D. Kim, K. Ahn, and J. Lee.</p>
+              <p>Manuscript under review, 2026.</p>
+            </li>
+            <li class="publication">
+              <p class="pub-title"><strong>FED: Fast and Efficient Dataset Deduplication Framework with GPU Acceleration.</strong></p>
+              <p>Y. Son, <span class="author-me">C. Kim</span>, and J. Lee.</p>
+              <p>
+                arXiv:2501.01046, 2025.
+                <a href="https://arxiv.org/abs/2501.01046" target="_blank" rel="noreferrer">Paper</a>
+              </p>
+            </li>
+            <li class="publication">
+              <p class="pub-title"><strong>Efficient Homomorphic Max Algorithm for Multivariables.</strong></p>
+              <p>J. H. Cheon, W. Cho, S. Hong, and <span class="author-me">C. Kim</span>.</p>
+              <p>Preprint, 2020.</p>
+            </li>
+          </ol>
+        </div>
+
+        <div class="publication-group">
+          <h3 class="publication-heading">Domestic Publications</h3>
+          <ol class="publication-list">
+            <li class="publication">
+              <p class="pub-title"><strong>Accelerating 2D Convolution using cuFFTDx.</strong></p>
+              <p>S. Bae, J. Lee, <span class="author-me">C. Kim</span>, S. Lee, and J. Lee.</p>
+              <p>Korea Computer Congress (KCC), 2025.</p>
+            </li>
+            <li class="publication">
+              <p class="pub-title"><strong>New Adaptive Matching Order and Performance Comparison for Subgraph Matching Problem.</strong></p>
+              <p>S. Min, W. Shin, <span class="author-me">C. Kim</span>, and K. Park.</p>
+              <p>KCC Best Paper Award, 2021.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="research" class="section">
+        <h2>Research</h2>
+        <div class="entry">
+          <p class="entry-title">GPU-accelerated numerical computing</p>
+          <p class="meta">Thunder Research Lab, Seoul National University, Advisor: Prof. Jaejin Lee, Sep. 2022 - Present</p>
+          <p>
+            My recent research redesigns numerical algorithms for modern GPU
+            hardware. I have worked on Tensor Core FFT kernels, GPU-aware sparse
+            LU factorization, and multi-GPU sparse solver components, with an
+            emphasis on reducing data movement, improving locality, and matching
+            computation to GPU memory hierarchy and Tensor Cores.
+          </p>
+          <p>
+            I also explored memory-aware quantum circuit partitioning as a lower
+            priority direction, focusing on locality and memory traffic reduction.
+          </p>
+        </div>
+        <div class="entry">
+          <p class="entry-title">Large-scale LLM data systems</p>
+          <p class="meta">May 2022 - Mar. 2023</p>
+          <p>
+            I contributed to large-scale crawling and preprocessing pipelines,
+            developed a GPU-accelerated LSH-based deduplication framework, and
+            profiled training efficiency with CUPTI and Nsight.
+          </p>
+        </div>
+        <div class="entry">
+          <p class="entry-title">Earlier research</p>
+          <p>
+            As an undergraduate researcher in Thunder Research Lab, I developed
+            GPU kernels and simulations in OpenCL, CUDA, and PyTorch. I also
+            worked on DAF graph matching with Prof. Kunsoo Park and CKKS
+            homomorphic encryption optimization with Prof. Jung Hee Cheon.
+          </p>
+        </div>
       </section>
 
       <section id="education" class="section">
@@ -85,138 +174,22 @@
         </div>
       </section>
 
-      <section id="publications" class="section">
-        <h2>Publications</h2>
-        <div class="publication-group">
-          <h3 class="publication-heading">Publications</h3>
-          <ol class="publication-list">
-            <li class="publication">
-              <p class="pub-title"><strong>SnuSOLVER: Optimizing Sparse Direct Solvers for Heterogeneous Systems.</strong></p>
-              <p><span class="author-me">C. Kim</span>, J. Lee, J. Kim, D. Kim, K. Ahn, H. U. Cho, S. Baek, and J. Lee.</p>
-              <p>Proceedings of ICS 2025.</p>
-            </li>
-          </ol>
-        </div>
-
-        <div class="publication-group">
-          <h3 class="publication-heading">Ongoing</h3>
-          <ol class="publication-list">
-            <li class="publication">
-              <p class="pub-title"><strong>Accelerating Fast Fourier Transform with Tensor Cores.</strong></p>
-              <p><span class="author-me">C. Kim</span>, S. Bae, S. Lee, J. Lee, J. Kim, D. Kim, K. Ahn, and J. Lee.</p>
-              <p>Submitted for publication (ASPLOS, under review), 2026.</p>
-            </li>
-            <li class="publication">
-              <p class="pub-title"><strong>FED: Fast and Efficient Dataset Deduplication Framework with GPU Acceleration.</strong></p>
-              <p>Y. Son, <span class="author-me">C. Kim</span>, and J. Lee.</p>
-              <p>
-                arXiv:2501.01046, 2025.
-                <a href="https://arxiv.org/abs/2501.01046" target="_blank" rel="noreferrer">Paper</a>
-              </p>
-            </li>
-          </ol>
-        </div>
-
-        <div class="publication-group">
-          <h3 class="publication-heading">Domestic and Other Preprints</h3>
-          <ol class="publication-list">
-            <li class="publication">
-              <p class="pub-title"><strong>Accelerating 2D Convolution using cuFFTDx.</strong></p>
-              <p>S. Bae, J. Lee, <span class="author-me">C. Kim</span>, S. Lee, and J. Lee.</p>
-              <p>Korea Computer Congress (KCC), 2025.</p>
-            </li>
-            <li class="publication">
-              <p class="pub-title"><strong>New Adaptive Matching Order and Performance Comparison for Subgraph Matching Problem.</strong></p>
-              <p>S. Min, W. Shin, <span class="author-me">C. Kim</span>, and K. Park.</p>
-              <p>KCC Best Paper Award, 2021.</p>
-            </li>
-            <li class="publication">
-              <p class="pub-title"><strong>Efficient Homomorphic Max Algorithm for Multivariables.</strong></p>
-              <p>J. H. Cheon, W. Cho, S. Hong, and <span class="author-me">C. Kim</span>.</p>
-              <p>Preprint, 2020.</p>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <section id="experience" class="section">
-        <h2>Research Experience</h2>
-        <div class="entry">
-          <p class="entry-title">Graduate Researcher, Thunder Research Lab</p>
-          <p class="meta">Seoul National University, Advisor: Prof. Jaejin Lee, Sep. 2022 - Present</p>
-          <p>
-            Developed Tensor Core FFT kernels, GPU-aware sparse LU optimization,
-            multi-GPU solver components, and memory-aware quantum circuit
-            partitioning. The work focuses on reducing data movement and improving
-            locality on modern GPU systems.
-          </p>
-        </div>
-        <div class="entry">
-          <p class="entry-title">Large-scale LLM Systems Research</p>
-          <p class="meta">May 2022 - Mar. 2023</p>
-          <p>
-            Built crawling and preprocessing pipelines, developed a GPU-accelerated
-            LSH deduplication framework, and profiled training efficiency with
-            CUPTI and Nsight.
-          </p>
-        </div>
-        <div class="entry">
-          <p class="entry-title">Undergraduate Researcher, Thunder Research Lab</p>
-          <p class="meta">Seoul National University, Advisor: Prof. Jaejin Lee, Mar. 2021 - Aug. 2022</p>
-          <p>
-            Developed GPU kernels and simulations in OpenCL, CUDA, and PyTorch,
-            with work on practical quantization strategies for machine learning workloads.
-          </p>
-        </div>
-        <div class="entry">
-          <p class="entry-title">UROP Researcher</p>
-          <p class="meta">Seoul National University, Advisor: Prof. Kunsoo Park, Sep. 2020 - Dec. 2020</p>
-          <p>
-            Analyzed computational bottlenecks in the DAF graph matching algorithm
-            on large real-world graphs.
-          </p>
-        </div>
-        <div class="entry">
-          <p class="entry-title">Research Intern, CryptoLab</p>
-          <p class="meta">Seoul National University, Advisor: Prof. Jung Hee Cheon, Feb. 2020 - Aug. 2020</p>
-          <p>
-            Optimized CKKS homomorphic encryption routines through improved
-            polynomial operations, multi-threading, and GPU parallelization.
-          </p>
-        </div>
-      </section>
-
-      <section id="awards" class="section">
-        <h2>Awards and Honors</h2>
-        <div class="entry">
-          <p class="entry-title">Scholarship</p>
-          <ul class="plain-list">
-            <li>Presidential Science Scholarship, Korea Student Aid Foundation, 2016-2022.</li>
-          </ul>
-        </div>
-        <div class="entry">
-          <p class="entry-title">Programming Competitions</p>
-          <ul class="plain-list">
-            <li>ACM-ICPC Asia Regional Seoul, 4th Place, 2021.</li>
-            <li>ACM-ICPC Asia Regional Seoul, 4th Place, 2020.</li>
-            <li>University Collegiate Programming Contest, 3rd Place, 2019.</li>
-            <li>Samsung Collegiate Programming Cup, 5th Place, 2018.</li>
-          </ul>
-        </div>
-        <div class="entry">
-          <p class="entry-title">Mathematics Competitions</p>
-          <ul class="plain-list">
-            <li>Korean Mathematical Competition for University Students, Silver Prize, 2019.</li>
-            <li>Simon Marais Mathematics Competition, 7th Place, 2018.</li>
-            <li>International Mathematical Olympiad, Bronze Medal, 2015.</li>
-            <li>National Team Selection, selected as one of six representatives, 2015.</li>
-            <li>Korea Mathematical Olympiad, Gold Medal, 2014.</li>
-          </ul>
-        </div>
+      <section id="honors" class="section">
+        <h2>Selected Honors</h2>
+        <ul class="plain-list honors-list">
+          <li>International Mathematical Olympiad, Bronze Medal, 2015.</li>
+          <li>Presidential Science Scholarship, Korea Student Aid Foundation, 2016-2022.</li>
+          <li>ACM-ICPC Asia Regional Seoul, 4th Place, 2020 and 2021.</li>
+          <li>University Collegiate Programming Contest, 3rd Place, 2019.</li>
+          <li>Samsung Collegiate Programming Cup, 5th Place, 2018.</li>
+          <li>Korean Mathematical Competition for University Students, Silver Prize, 2019.</li>
+          <li>Simon Marais Mathematics Competition, 7th Place, 2018.</li>
+          <li>National Team Selection, selected as one of six representatives, 2015; Korea Mathematical Olympiad, Gold Medal, 2014.</li>
+        </ul>
       </section>
 
       <section id="teaching" class="section">
-        <h2>Teaching Experience</h2>
+        <h2>Teaching</h2>
         <div class="entry">
           <p class="entry-title">Teaching Assistant, Accelerator Programming School</p>
           <p class="meta">Winter 2022 - Summer 2025</p>
