@@ -90,6 +90,25 @@ ol {
   transform: scaleX(1);
 }
 
+.intro {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.intro-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.profile-photo {
+  width: 132px;
+  height: 168px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+}
+
 h1,
 h2 {
   font-family: "Source Serif 4", Georgia, serif;
@@ -259,6 +278,16 @@ h2 {
 
   .nav {
     margin-bottom: 28px;
+  }
+
+  .intro {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .profile-photo {
+    width: 112px;
+    height: 142px;
   }
 
   h1 {
